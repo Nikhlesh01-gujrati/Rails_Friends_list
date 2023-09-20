@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<!-- <%= render @friend %> -->
+<div class="col-md-5 d-flex justify-content-center">
+  <div class="h-100 p-5 text-bg-dark rounded-3">
+    <p>
+      <strong>First name:</strong>
+      <%= @friend.first_name %>
+    </p>
+    <p>
+      <strong>Last name:</strong>
+      <%= @friend.last_name %>
+    </p>
+    <p>
+      <strong>Email:</strong>
+      <%= @friend.email %>
+    </p>
+    <p>
+      <strong>Phone Number:</strong>
+      <%= @friend.phone %>
+    </p>
+    <p>
+      <strong>Twitter:</strong>
+      <%= @friend.twitter %>
+    </p>
+    <div>
+      <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-secondary" %> |
+      <%= link_to "Back", friends_path, class:"btn btn-outline-light" %> 
+    </div>
+  </div>
+</div>
+
+
