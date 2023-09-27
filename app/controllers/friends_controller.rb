@@ -1,10 +1,12 @@
 class FriendsController < ApplicationController
+  #load_and_authorize_resource
   before_action :set_friend, only: %i[ show edit update destroy ]
   #before_action :authenticate_user!, expect: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /friends or /friends.json
   def index
+    # @friends = current_user.friends
     @friends = Friend.all
   end
 
